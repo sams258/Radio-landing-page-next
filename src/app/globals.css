@@ -1,6 +1,5 @@
 /* src/app/global.css */
 
-
 /* BASE STYLES */
 body {
   margin: 0;
@@ -12,7 +11,8 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 /* 3. MAIN LAYOUT STYLES */
@@ -55,7 +55,11 @@ code {
 .logo {
   width: 150px;
   margin-bottom: 20px;
-  height: auto; /* Good practice for Next/Image */
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+  overflow: hidden;
 }
 
 .footer {
