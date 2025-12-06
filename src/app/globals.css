@@ -1,26 +1,119 @@
-@import "tailwindcss";
+/* src/app/global.css */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* BASE STYLES */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  /* Use the variable or fallback to Arial */
+  font-family: var(--font-roboto), "Arial", sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #f3f3f3, #e0e0e0);
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* 3. MAIN LAYOUT STYLES */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 20px;
+  background: #f3f3f3;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.header h1 {
+  /* CHANGED: Use the variable */
+  font-family: var(--font-berkshire), cursive;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+.main-content h2 {
+  /* CHANGED: Use the variable */
+  font-family: var(--font-changa), sans-serif;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 20px;
+  height: auto; /* Good practice for Next/Image */
+}
+
+.footer {
+  /* CHANGED: Use the variable */
+  font-family: var(--font-changa), sans-serif;
+  font-weight: 300;
+  background: #00a9c3;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 0.9em;
+}
+
+.footer h3 {
+  /* CHANGED: Use the variable */
+  font-family: var(--font-berkshire), cursive;
+  font-weight: 100;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* 4. AUDIO PLAYER STYLES */
+/* (Kept exactly as you had them) */
+.audio-player {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f3f3f3;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 100px; /* Note: 100px seems very narrow, maybe check if this should be bigger? */
+  margin: 20px auto 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.audio-player h4 {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.play-pause-btn {
+  background: #00a9c3;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+  transition: background 0.3s;
+}
+
+.play-pause-btn:hover {
+  background: #007c99;
 }
