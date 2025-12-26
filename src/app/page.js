@@ -18,7 +18,7 @@ export default function Home() {
         <h2>الإذاعة اللبنانية الدولية</h2>
 
         <AudioPlayer
-          src="https://lbigroup.radioca.st/;"
+          src="https://lbigroup.radioca.st/stream"
           title="Al Lubnaniya Radio – Live"
         />
       </main>
